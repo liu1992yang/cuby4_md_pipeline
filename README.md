@@ -38,5 +38,6 @@ interval_steps: e.g. `100` (fs steps, every 100 fs extract 1 snapshot)
 
 
 ## (4)extract optimized geometries as Gaussian/gaussview readable format (`.com` or `.gjf` of your choice) with extracted energies at current computation level  
+After pm6 optimizations, extract optimized geometries and 
 
 The output files are ready to use conformation sorting (see `geometry_clustering` repo)
