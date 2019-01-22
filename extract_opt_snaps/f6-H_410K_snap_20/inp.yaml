@@ -1,0 +1,14 @@
+job: optimize
+geometry: f6-H_410K_snap_20.xyz
+charge: 1
+multiplicity: 1
+maxcycles: 2000
+print: timing
+interface: mopac
+mopac_precise: yes
+mopac_peptide_bond_fix: yes
+method: pm6
+modifiers: dispersion3, h_bonds4
+modifier_h_bonds4:
+  h_bonds4_scale_charged: no
+  h_bonds4_extra_scaling: {}

@@ -1,0 +1,8 @@
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/y7-H; cuby4 anneal.yaml &>LOG
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/v4-H; cuby4 anneal.yaml &>LOG
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/s0-H; cuby4 anneal.yaml &>LOG
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/f6-H; cuby4 anneal.yaml &>LOG
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/s1-H; cuby4 anneal.yaml &>LOG
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/i3-H; cuby4 anneal.yaml &>LOG
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/s5-H; cuby4 anneal.yaml &>LOG
+cd /gscratch/stf/yliu92/mono_md/pipline_folder/s2-H; cuby4 anneal.yaml &>LOG
