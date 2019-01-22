@@ -41,7 +41,7 @@ interval_steps: e.g. `100` (fs steps, every 100 fs extract 1 snapshot)
 After pm6 optimizations, extract optimized geometries from "\*snap\*" dirs and energy at current compuation level, format the coordinates in gaussian/gaussview readable format (.com or .gjf, you name it) and save the energy in a `pm6_energy_combine.txt` file in a directory called `dftsubs`  
 ### `./extract_opted_pm6.sh filetype functional basis-set`  
 filetype: `com` | `gjf`  
-functional: e.g. `wb97xd`
+functional: e.g. `wb97xd`  
 basis-set: e.g. 6-31g\\(d,p\\) **(need to escape parentheses "(" and ")")**  
 
 
