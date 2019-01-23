@@ -2,6 +2,9 @@
 a pipeline to work with gaussian readable initial structures for cuby4-mopac interfaced BOMD and downstream snapshot geometry optimization 
 
 ### require to run on Hyak with `srun` and have `parallel_sql` installed  
+get an interactive session on mox.hyak by using  
+`srun -p stf-int -A stf --time=2:00:00 --mem=10G --pty /bin/bash`
+
 ## (1)BOMD at desired temperature and maxcycles  
 start with gaussview generated z-matrix geometry format (*.gjf* or *.com*), generate individual sub-dirs e.g. s0-H, with converted cuby4 readable format s0-H.xyz and anneal.yaml within the dir for every initial structure in current dir; then an `md_tasklist` as tasklist and `multiple_md.sh` for parallel submission (with parallel_sql customized for uw-hyak); also a `filelist` for future use  
 
@@ -42,7 +45,7 @@ After pm6 optimizations, extract optimized geometries from "\*snap\*" dirs and e
 ### `usage ./extract_opted_pm6.sh filetype functional basis-set`  
 filetype: `com` | `gjf`  
 functional: e.g. `wb97xd`  
-basis-set: e.g. 6-31g\\(d,p\\) **(need to escape parentheses "(" and ")")**  
+basis-set: e.g. `6-31g\\(d,p\\)` **(need to escape parentheses "(" and ")")**  
 
 
 The output files are ready to use conformation sorting (see `geometry_clustering` repo)
