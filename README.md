@@ -45,7 +45,7 @@ After pm6 optimizations, extract optimized geometries from "\*snap\*" dirs and e
 ### `usage ./extract_opted_pm6.sh filetype functional basis-set`  
 filetype: `com` | `gjf`  
 functional: e.g. `wb97xd`  
-basis-set: e.g. `6-31g\\(d,p\\)` **(need to escape parentheses "(" and ")")**  
+basis-set: e.g. `6-31g\(d,p\)` **(need to escape parentheses "(" and ")")**  
 
 
 The output files are ready to use conformation sorting (see `geometry_clustering` repo)
