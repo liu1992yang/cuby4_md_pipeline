@@ -8,7 +8,7 @@ import functools, itertools
 
 FILELIST= os.environ['PYTHON_FILELIST']
 INTERVAL = os.environ['PYTHON_INTERVAL']
-assert FILELIST and INTERVAL,'usage: traj_proces.py filelist interval_steps'
+assert FILELIST and INTERVAL,'usage: traj_process.sh filelist interval_steps'
 
 
 def get_prefix(filelist):
@@ -156,16 +156,16 @@ def write_sbatch(task_number):
 #SBATCH --partition=ilahie
 #SBATCH --account=ilahie
 
-module load parallel_sql
+#module load parallel_sql
+module load parallel-20170722
 module load contrib/mopac16
 source {}/.rvm/scripts/rvm
 
-cat pm6_tasks|psu --load
 
 ldd /sw/contrib/cuby4/cuby4/classes/algebra/algebra_c.so > ldd.log
+cat pm6_tasks | parallel -j 28
 
-parallel_sql --sql -a parallel --exit-on-term -j {}
-'''.format(os.getcwd(),os.environ['HOME'],str(task_number)))
+'''.format(os.getcwd(),os.environ['HOME']))
 
 if __name__ == '__main__':
   file_list = FILELIST
