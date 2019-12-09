@@ -85,7 +85,7 @@ init_temp: {4}
 thermostat: berendsen
 thermostat_tc: 0.05
 temperature: {4}
-'''.format(folder,str(MAXCYCLE),str(charge),str(multiplicity)), str(TEMP))
+'''.format(folder,str(MAXCYCLE),str(charge),str(multiplicity), str(TEMP))
     if multiplicity != 1:
       fout.write("spin_restricted: uhf")
       fout.write("scf_cycles: 1000")
