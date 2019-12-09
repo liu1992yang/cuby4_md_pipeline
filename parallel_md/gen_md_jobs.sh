@@ -81,11 +81,11 @@ modifiers: dispersion3, h_bonds4
 modifier_h_bonds4:
   h_bonds4_scale_charged: no
   h_bonds4_extra_scaling: {{}}
-init_temp: 410
+init_temp: {4}
 thermostat: berendsen
 thermostat_tc: 0.05
-temperature: 410
-'''.format(folder,str(MAXCYCLE),str(charge),str(multiplicity)))
+temperature: {4}
+'''.format(folder,str(MAXCYCLE),str(charge),str(multiplicity)), str(TEMP))
     if multiplicity != 1:
       fout.write("spin_restricted: uhf")
       fout.write("scf_cycles: 1000")
